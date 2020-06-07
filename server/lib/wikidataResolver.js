@@ -1,5 +1,10 @@
 const axios = require("axios");
 
+const wbclaims = {
+    image: "P18",
+    twitter: "P2002"
+};
+
 module.exports = class WikidataResolver {
     async fetchProperties(params) {
         const { data } = await axios.get("https://www.wikidata.org/w/api.php", {
@@ -22,25 +27,43 @@ module.exports = class WikidataResolver {
         if (!wikidata) {
             return {};
         }
+        const { labels, descriptions, claims } = wikidata;
 
         // Get label for the personality name
-        wikidataProps.name =
-            wikidata.labels &&
-            wikidata.labels[lang] &&
-            wikidata.labels[lang].value;
+        wikidataProps.name = labels && labels[lang] && labels[lang].value;
 
         // Get description for the personality description
         wikidataProps.description =
-            wikidata.descriptions &&
-            wikidata.descriptions[lang] &&
-            wikidata.descriptions[lang].value;
+            descriptions && descriptions[lang] && descriptions[lang].value;
 
-        // Extract image if it exists
-        if (wikidata.claims.P18) {
-            const fileName = wikidata.claims.P18[0].mainsnak.datavalue.value;
-            wikidataProps.image = await this.getCommonsThumbURL(fileName);
+        if (claims) {
+            for (const property of Object.keys(wbclaims)) {
+                wikidataProps[property] = await this.extractClaimProperty(
+                    claims[wbclaims[property]],
+                    property
+                );
+            }
         }
+
         return wikidataProps;
+    }
+
+    async extractClaimProperty(wbproperty, property) {
+        if (!wbproperty) {
+            return;
+        }
+        switch (property) {
+            case "image":
+                // eslint-disable-next-line no-case-declarations
+                const fileName = wbproperty[0].mainsnak.datavalue.value;
+                return await this.getCommonsThumbURL(fileName);
+                break;
+            case "twitter":
+                return wbproperty.map(p => {
+                    return p.mainsnak.datavalue.value;
+                });
+                break;
+        }
     }
 
     async getCommonsThumbURL(imageTitle) {

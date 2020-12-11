@@ -42,7 +42,7 @@ class PersonalityView extends Component {
                 this.setState({ personality });
             })
             .catch(() => {
-                console.log("Error while fetching Personality");
+                console.log(this.props.t("personality:errorFetch"));
             });
     }
 

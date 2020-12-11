@@ -15,7 +15,7 @@ class Claim extends Component {
         self.getClaim();
         self.getPersonality();
         // @TODO i18n
-        message.info("Clique em uma frase para iniciar uma revisão");
+        message.info(this.props.t("claim:message1"));
     }
 
     getClaim() {
@@ -35,7 +35,7 @@ class Claim extends Component {
                 });
             })
             .catch(() => {
-                console.log("Error while fetching claim");
+                console.log(this.props.t("claim:errorMessage4"));
             });
     }
 
@@ -54,7 +54,7 @@ class Claim extends Component {
                 this.setState({ personality });
             })
             .catch(() => {
-                console.log("Error while fetching Personality");
+                console.log(this.props.t("claim:errorMessage3"));
             });
     }
 

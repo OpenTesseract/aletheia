@@ -8,6 +8,9 @@ import api from "../../api/personality";
 import "./AletheiaHeader.less";
 import { withRouter } from "react-router-dom";
 
+import { BellOutlined } from "@ant-design/icons"
+import { UserOutlined } from "@ant-design/icons"
+
 const { Header } = Layout;
 
 class AletheiaHeader extends Component {
@@ -29,6 +32,8 @@ class AletheiaHeader extends Component {
         return (
             <Header
                 style={{
+                    top: "0",
+
                     padding: "0",
                     marginBottom: "6px"
                 }}
@@ -45,6 +50,8 @@ class AletheiaHeader extends Component {
                         >
                             <MenuOutlined
                                 style={{
+                                    position: "absolute",
+                                    top: "-10px",
                                     fontSize: "16px",
                                     color: "white",
                                     padding: "8px"
@@ -53,9 +60,29 @@ class AletheiaHeader extends Component {
                         </a>
                     </Col>
                     <Col span={20}>
-                        <a onClick={() => this.props.history.push("/")}>
-                            <p className="aletheia-logo">AletheiaFact</p>
+                        <a onClick={() => this.props.history.push("/")}
+                            style={{
+                                position: "absolute",
+                                top: "-15px",
+
+                                left: "20%",
+
+
+
+                            }}
+                        >
+                            <p className="aletheia-logo"
+                                style={{
+                                    fontFamily: "Noticia Text",
+                                    fontStyle: "normal",
+                                    fontWeight: "normal",
+                                    fontSize: "26px",
+                                    lineHeight: "39px",
+
+                                }}>AletheiaFact</p>
                         </a>
+
+
                     </Col>
                     <Col span={2}>
                         <a
@@ -73,12 +100,51 @@ class AletheiaHeader extends Component {
                         >
                             <SearchOutlined
                                 style={{
+                                    position: "absolute",
                                     fontSize: "16px",
                                     color: "white",
-                                    padding: "8px"
+                                    top: "-5px",
+                                    right: "80px",
+
+
                                 }}
                             />
                         </a>
+                        <a>
+                            <BellOutlined
+                                style={{
+                                    position: "absolute",
+                                    fontSize: "16px",
+                                    color: "white",
+
+                                    top: "-5px",
+                                    right: "10px",
+
+                                }} />
+                        </a>
+
+                        <a>
+                            <UserOutlined
+                                style={{
+                                    position: "absolute",
+                                    fontSize: "16px",
+                                    color: "#2D77A3",
+                                    boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.1)",
+                                    border: " 0.2px solid white",
+                                    borderRadius: "50px",
+                                    backgroundColor: "white",
+                                    top: "-5px",
+                                    right: "40px",
+                                }} />
+                        </a>
+
+
+
+
+
+
+
+
                     </Col>
                 </Row>
             </Header>

@@ -17,6 +17,7 @@
 .env.production.local
 .env
 .eslintcache
+.vscode/**/*
 
 npm-debug.log*
 yarn-debug.log*

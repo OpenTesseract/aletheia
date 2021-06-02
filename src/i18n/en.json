@@ -16,11 +16,11 @@
         "totalItems": "{{total}} total"
     },
     "home": {
-        "title": "checking claims",
+        "title": "Checking claims",
         "subtitle": "from your favorite personalities",
-        "statsPersonalities": "personalities",
-        "statsClaims": "claims",
-        "statsClaimReviews": "reviewed claims",
+        "statsPersonalities": "Personalities",
+        "statsClaims": "Claims",
+        "statsClaimReviews": "Reviewed claims",
         "statsFooter": "contribute to an internet free of fake news",
         "createAccountButton": "Create account",
         "seeMorePersonalitiesButton": "See more Personalities"
@@ -90,8 +90,7 @@
     },
     "metrics": {
         "headerTitle": "Metrics Overview",
-        "header":
-            "The statistics below consider the most voted classification of individual claims. This speech contains {{totalClaims}} claims, of which {{totalClaimsReviewed}} received a total of {{total}} (100%) reviews:"
+        "header": "The statistics below consider the most voted classification of individual claims. This speech contains {{totalClaims}} claims, of which {{totalClaimsReviewed}} received a total of {{total}} (100%) reviews:"
     },
     "claim": {
         "cardOverallReviewPrefix": "Most",
@@ -111,18 +110,14 @@
         "contentField": "Content",
         "contentFieldPlaceholder": "Insert content here",
         "contentFieldError": "Please insert the content",
-        "contentFieldHelp":
-            "Please do not edit or change any aspect of the original text and choose to add full speeches instead of out of context claims (Twitter and general social media posts are OK).",
+        "contentFieldHelp": "Please do not edit or change any aspect of the original text and choose to add full speeches instead of out of context claims (Twitter and general social media posts are OK).",
         "dateField": "Date",
         "dateFieldPlaceholder": "Select date",
         "dateFieldError": "Please, insert a date",
-        "dateFieldHelp":
-            "When was this speech released or told? Not the date you are adding it to Aletheia.",
-        "disclaimer":
-            "* The Add speech tool is only available for manually adding real speeches and claims made by said personality. Any attempt to dissiminate fake news through this platform is utterly forbidden and will result on user ban and possible lawsuit.",
+        "dateFieldHelp": "When was this speech released or told? Not the date you are adding it to Aletheia.",
+        "disclaimer": "* The Add speech tool is only available for manually adding real speeches and claims made by said personality. Any attempt to dissiminate fake news through this platform is utterly forbidden and will result on user ban and possible lawsuit.",
         "errorAcceptTerms": "You need to accept the terms to submit the form",
-        "checkboxAcceptTerms":
-            "I personally atest that all information added is truthful.",
+        "checkboxAcceptTerms": "I personally atest that all information added is truthful.",
         "cancelButton": "Cancel",
         "updateButton": "Update speech",
         "saveButton": "Add speech"
@@ -153,10 +148,8 @@
     },
     "CTARegistration": {
         "title": "Wanna be a reviewer?",
-        "body":
-            "Wanna be a reviewer? Aletheia is currently on Beta Test and we are accepting all journalists and fact-checking professionals to test the platform!",
-        "footer":
-            "Our goal is to be open for all users to add and review claims once tests are done. Keep it up with us on social media!",
+        "body": "Wanna be a reviewer? Aletheia is currently on Beta Test and we are accepting all journalists and fact-checking professionals to test the platform!",
+        "footer": "Our goal is to be open for all users to add and review claims once tests are done. Keep it up with us on social media!",
         "button": "Apply to be a reviewer"
     }
 }

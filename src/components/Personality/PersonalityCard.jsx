@@ -33,12 +33,39 @@ class PersonalityCard extends Component {
                     <Row
                         style={{
                             padding: "10px 30px",
-                            marginTop: "10px",
-                            width: "100%"
+                            marginTop: "1em",
+
+                            width: "1000px",
+
+                            position: "relative",
+                            height: "156px",
+                            marginLeft: "-4.95%",
+                            marginRight: "-4%",
+
+
+                            background: "#FFFFFF",
+                            border: "1px solid #EEEEEE",
+                            boxSizing: "border-box",
+                            boxShadow: "0px 3px 3px rgba(0, 0, 0, 0.2)",
+                            borderRadius: "10px",
+
                         }}
                     >
                         <Col span={this.avatarSpan}>
+
                             <Avatar
+                                style={{
+
+                                    boxShadow: "0 0 0 1.5px #B1C2CD",
+
+                                    boxSizing: "border-box",
+                                    overflow: "hidden",
+                                    border: "2px solid white",
+                                    borderRadius: "50px"
+
+
+
+                                }}
                                 size={this.avatarSize}
                                 src={personality.image}
                             />
@@ -99,6 +126,27 @@ class PersonalityCard extends Component {
                                         }
                                         href={`${this.props.hrefBase ||
                                             "personality/"}${personality._id}`}
+
+                                        style={{
+                                            background: "#2D77A3",
+                                            borderRadius: "30px",
+
+                                            position: "absolute",
+
+                                            height: "3em",
+                                            width: "8em",
+                                            paddingTop: "1em",
+
+                                            fontFamily: "Open Sans",
+                                            fontStyle: "normal",
+                                            fontWeight: "bold",
+                                            fontSize: "14px",
+                                            lineHeight: "107%",
+                                            textAlign: "center",
+
+                                            color: "#FFFFFF",
+
+                                        }}
                                     >
                                         {t("personality:profile_button")}
                                     </Button>

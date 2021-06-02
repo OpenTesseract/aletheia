@@ -6,6 +6,7 @@ import statsApi from "../../api/stats";
 import PersonalityCard from "../Personality/PersonalityCard";
 import { withTranslation } from "react-i18next";
 import SocialMediaShare from "../SocialMediaShare";
+import { ArrowRightOutlined } from "@ant-design/icons"
 
 class Home extends Component {
     constructor(props) {
@@ -105,6 +106,7 @@ class Home extends Component {
                                 <span
                                     style={{
                                         fontSize: "26px"
+
                                     }}
                                 >
                                     {t("home:title")}
@@ -167,8 +169,38 @@ class Home extends Component {
                                     justifyContent: "space-between"
                                 }}
                             >
-                                <span>{t("home:statsFooter")}</span>
-                                <Button href="#create_account">
+                                <span style={{
+                                    position: "relative",
+                                    width: "133px",
+                                    height: "2em",
+                                }}
+                                >{t("home:statsFooter")}</span>
+                                <Button href="#create_account"
+                                    style={{
+                                        position: "absolut",
+                                        margin: "auto",
+                                        float: "left",
+                                        background: "#FFFFFF",
+                                        borderRadius: "30px",
+
+                                        alignItems: "center",
+                                        justifyContent: "center",
+
+                                        width: "150px",
+                                        height: "40px",
+                                        padding: "12px",
+
+
+                                        fontFamily: "Open Sans",
+                                        fontStyle: "normal",
+                                        fontWeight: "bold",
+                                        fontSize: "14px",
+                                        lineHeight: "107%",
+
+                                        textAlign: "center",
+
+                                        color: "#2D77A3",
+                                    }}>
                                     {t("home:createAccountButton")}
                                 </Button>
                             </Row>
@@ -188,10 +220,38 @@ class Home extends Component {
                         <Row
                             style={{
                                 padding: "10px"
+
                             }}
                         >
-                            <Button href="/personality">
+                            <Button href="/personality" style={{
+
+
+                                margin: "auto",
+                                left: "30%",
+                                bottom: "10px",
+                                position: "relative",
+
+                                alignItems: "center",
+                                justifyContent: "center",
+
+                                border: "2px solid #2D77A3",
+                                boxSizing: "borderBox",
+                                borderRadius: "30px",
+                                height: "40px",
+                                color: "#2D77A3",
+
+                                fontFamily: "Open Sans",
+                                fontStyle: "normal",
+                                fontWeight: "bold",
+                                fontSize: "14px",
+                                lineHeight: "107%",
+                                padding: "5%",
+
+
+
+                            }}>
                                 {t("home:seeMorePersonalitiesButton")}
+                                <ArrowRightOutlined />
                             </Button>
                         </Row>
                     </Row>

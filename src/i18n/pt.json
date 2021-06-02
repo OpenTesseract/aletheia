@@ -16,12 +16,12 @@
         "totalItems": "{{total}} no total"
     },
     "home": {
-        "title": "checagem de afirmaçoes",
+        "title": "Checagem de afirmaçoes",
         "subtitle": "das suas personalidades favoritas",
-        "statsPersonalities": "personalidades",
-        "statsClaims": "afirmaçoes",
-        "statsClaimReviews": "afirmaçoes revisadas",
-        "statsFooter": "contribua para uma internet livre de noticias falsas",
+        "statsPersonalities": "Personalidades",
+        "statsClaims": "Afirmaçoes",
+        "statsClaimReviews": "Afirmaçoes revisadas",
+        "statsFooter": "Contribua para uma internet livre de noticias falsas",
         "createAccountButton": "Crie sua conta",
         "seeMorePersonalitiesButton": "Veja mais personalidades"
     },
@@ -90,8 +90,7 @@
     },
     "metrics": {
         "headerTitle": "Resumo das Avaliações",
-        "header":
-        "As estatísticas abaixo consideram a classificação mais votada afirmações individuais. Este discurso contém {{totalClaims}} afirmações, das quais {{totalClaimsReviewed}} receberam um total de {{total}} (100%) avaliações:"
+        "header": "As estatísticas abaixo consideram a classificação mais votada afirmações individuais. Este discurso contém {{totalClaims}} afirmações, das quais {{totalClaimsReviewed}} receberam um total de {{total}} (100%) avaliações:"
     },
     "claim": {
         "cardOverallReviewPrefix": "Maioria",
@@ -111,18 +110,14 @@
         "contentField": "Conteudo",
         "contentFieldPlaceholder": "Insira conteudo aqui",
         "contentFieldError": "Por favor, insira o conteudo",
-        "contentFieldHelp":
-        "Por favor, nao edite ou mude qualquer aspecto do texto original e escolha adicionar discursos completos ao inves de declaraçoes fora de contexto.",
+        "contentFieldHelp": "Por favor, nao edite ou mude qualquer aspecto do texto original e escolha adicionar discursos completos ao inves de declaraçoes fora de contexto.",
         "dateField": "Data",
         "dateFieldPlaceholder": "Selecione Data",
         "dateFieldError": "Por favor, insira uma data",
         "dateFieldHelp": "Quando esse discurso foi dito ou publicado?",
-        "disclaimer":
-        "* Essa ferramenta esta apenas disponivel para adicionar manualmente declaraçoes e discursos reais criados ou ditos por uma personalidade. Qualquer tentativa de dissiminar noticias falsas atraves dessa plataforma eh expressamente proibida e pode resultar em banimento do usuario e possivelmente açoa judicial.",
-        "errorAcceptTerms":
-        "Voce precisa aceitar os termos para submeter o formulario",
-        "checkboxAcceptTerms":
-        "Eu atesto pessoalmente que toda informaçao adicionada eh confiavel.",
+        "disclaimer": "* Essa ferramenta esta apenas disponivel para adicionar manualmente declaraçoes e discursos reais criados ou ditos por uma personalidade. Qualquer tentativa de dissiminar noticias falsas atraves dessa plataforma eh expressamente proibida e pode resultar em banimento do usuario e possivelmente açoa judicial.",
+        "errorAcceptTerms": "Voce precisa aceitar os termos para submeter o formulario",
+        "checkboxAcceptTerms": "Eu atesto pessoalmente que toda informaçao adicionada eh confiavel.",
         "cancelButton": "Cancelar",
         "updateButton": "Atualizar discurso",
         "saveButton": "Adicionar discurso"
@@ -153,10 +148,8 @@
     },
     "CTARegistration": {
         "title": "Quer ser um revisor?",
-        "body":
-        "Aletheia está atualmente em teste beta e estamos aceitando todos os jornalistas e profissionais de checagem de fatos para testar a plataforma!",
-        "footer":
-        "Nosso objetivo é estar aberto para que todos os usuários adicionem e revisem alegações assim que os testes forem concluídos. Acompanhe-nos nas redes sociais!",
+        "body": "Aletheia está atualmente em teste beta e estamos aceitando todos os jornalistas e profissionais de checagem de fatos para testar a plataforma!",
+        "footer": "Nosso objetivo é estar aberto para que todos os usuários adicionem e revisem alegações assim que os testes forem concluídos. Acompanhe-nos nas redes sociais!",
         "button": "Inscreva-se para ser um revisor"
     }
 }

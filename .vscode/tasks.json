@@ -4,14 +4,55 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run App",
-            "type": "shell",
-            "command": "docker-compose down && docker-compose up & yarn && yarn build && yarn dev:server & yarn dev:front",
-            "problemMatcher": [],
+            "label": "Build",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Prepare", "Run"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Prepare",
+            "dependsOrder": "parallel",
+            "dependsOn": ["docker-compose up", "yarn install"]
+        },
+        {
+            "label": "Run",
+            "dependsOrder": "parallel",
+            "dependsOn": ["run backend", "run frontend"]
+        },
+        {
+            "label": "docker-compose up",
+            "type": "shell",
+            "command": "docker-compose down && docker-compose up -d"
+        },
+        {
+            "label": "yarn install",
+            "type": "shell",
+            "command": "yarn install"
+        },
+        {
+            "label": "kill backend",
+            "type": "shell",
+            "command": "if lsof -i:3000; then kill -15 $(lsof -t -i:3000); fi"
+        },
+        {
+            "label": "run backend",
+            "type": "shell",
+            "command": "yarn dev:server",
+            "dependsOn": ["kill backend"]
+        },
+        {
+            "label": "kill frontend",
+            "type": "shell",
+            "command": "if lsof -i:1234; then kill -15 $(lsof -t -i:1234); fi"
+        },
+        {
+            "label": "run frontend",
+            "type": "shell",
+            "command": "yarn build && yarn dev:front",
+            "dependsOn": ["kill frontend"]
         }
     ]
 }
